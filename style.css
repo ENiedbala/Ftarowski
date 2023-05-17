@@ -40,7 +40,7 @@ html {
 	height: 100%;
 	object-fit: cover;
 }
-
+/* menu adres jest opcjonalny */
 /* .menu_adres {
 	display: flex;
 	flex-direction: column;
