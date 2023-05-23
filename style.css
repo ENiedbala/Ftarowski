@@ -12,9 +12,10 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-html {
+body {
 	font-size: 12px;
 	overflow-x: hidden;
+	overflow-wrap: break-word;
 	/* background-color: rgb(0, 0, 0); */
 }
 .container {
@@ -24,9 +25,9 @@ html {
 	background-attachment: scroll;
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: 1fr 3fr 1fr;
+	grid-template-rows: 1fr auto auto;
 	width: 100vw;
-	height: 100vh;
+	height: auto;
 	color: white;
 	margin: 0;
 	padding: 0;
@@ -50,7 +51,7 @@ header {
 	display: flex;
 	justify-content: space-around;
 	margin: 0px auto 0;
-	padding: 5px 0;
+	padding: 2px 0;
 
 	font-size: 1.2em;
 	background-color: rgba(0, 0, 0, 0.842);
@@ -58,8 +59,9 @@ header {
 /* nav styling */
 nav {
 	position: sticky;
-	top: 10px;
+	top: 0;
 	background-color: rgba(0, 0, 0, 0.842);
+	grid-column: 1/13;
 }
 .navbar {
 	width: 100%;
@@ -183,6 +185,7 @@ ul > li > a:hover::after {
 	ul {
 		position: absolute;
 		right: -15px;
+
 		top: 8em;
 		background-color: black;
 		height: 100vh;
@@ -193,18 +196,18 @@ ul > li > a:hover::after {
 	}
 	ul.menu_list--active {
 		transform: translate(0%);
-		/* display: flex; */
+
 		transition: transform 0.3s 0.2s ease-in-out;
 	}
 	.upSideContact {
 		width: 98%;
-
 		text-align: center;
 		display: flex;
 		justify-content: space-around;
-		margin: 10px auto 0;
+		margin: 0;
 	}
 }
+
 /* burger active transform */
 .hamburger--active .hamburger_line {
 	background: transparent;
@@ -223,15 +226,17 @@ footer {
 	grid-column: 1/13;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: 0.5fr 1.5fr auto;
+	grid-template-rows: 0.5fr auto auto;
 }
 .logoFooter {
 	grid-column: 2/3;
 	grid-row: 1/2;
+	justify-items: center;
+	text-align: center;
 }
 .logoFooter img {
-	max-width: 100%;
-	max-height: 100%;
+	max-width: 90%;
+	max-height: 90%;
 	object-fit: cover;
 }
 .adressFooter {
@@ -241,7 +246,7 @@ footer {
 	justify-content: space-around;
 	flex-direction: column;
 	align-items: start;
-	margin-left: 45px;
+	margin-left: 50px;
 	font-size: 1.8em;
 }
 .adressFooter a {
@@ -256,10 +261,16 @@ footer {
 	grid-column: 2/3;
 	grid-row: 2/3;
 	display: flex;
+
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 }
+.mapFooter iframe {
+	max-width: 100%;
+	max-height: 100%;
+}
+
 .timeOpenFooter {
 	grid-column: 3/4;
 	grid-row: 2/3;
@@ -268,11 +279,47 @@ footer {
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: space-around;
-	margin-left: 25px;
+	margin-left: 20px;
 }
 #designBy {
 	grid-column: 2/3;
 	grid-row: 3/4;
 	justify-items: center;
 	text-align: center;
+}
+@media only screen and (max-width: 970px) {
+	footer {
+		grid-template-rows: 0.5fr auto auto auto auto;
+	}
+
+	.adressFooter {
+		grid-column: 1/4;
+		grid-row: 2/3;
+
+		justify-content: space-around;
+		margin: 20px auto;
+	}
+	.mapFooter {
+		grid-column: 1/4;
+		grid-row: 3/4;
+		max-width: 90%;
+		max-height: 90%;
+		margin: auto;
+	}
+
+	.timeOpenFooter {
+		grid-column: 1/4;
+		grid-row: 4/5;
+		justify-items: center;
+		margin: 20px auto;
+		justify-content: space-around;
+	}
+	#designBy {
+		grid-column: 2/3;
+		grid-row: 5/6;
+	}
+}
+main {
+	grid-column: 1/13;
+	overflow-wrap: break-word;
 }
