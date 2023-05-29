@@ -16,6 +16,7 @@ body {
 	font-size: 12px;
 	overflow-x: hidden;
 	overflow-wrap: break-word;
+	font-family: 'Lora', serif;
 	/* background-color: rgb(0, 0, 0); */
 }
 .container {
@@ -45,16 +46,16 @@ header {
 }
 
 .upSideContact {
-	font-family: 'BIZ UDPMincho', serif;
+	font-family: 'Merriweather', serif;
 	width: 100%;
 	text-align: center;
 	display: flex;
 	justify-content: space-around;
 	margin: 0px auto 0;
 	padding: 2px 0;
-
-	font-size: 1.2em;
+	font-size: 1em;
 	background-color: rgba(0, 0, 0, 0.842);
+	display: none;
 }
 /* nav styling */
 nav {
@@ -97,18 +98,18 @@ ul > li {
 	list-style: none;
 }
 ul > li > a {
-	font-family: 'BIZ UDPMincho', serif;
+	font-family: 'Englebert', sans-serif;
 	font-weight: 100;
 	text-decoration: none;
 	color: var(--gold);
-	font-size: 1.4em;
+	font-size: 1.8em;
 	position: relative;
 	padding: 0.5em;
 	letter-spacing: 0.1em;
 }
 ul > li > a:hover {
 	font-weight: 600;
-	font-size: 1.5em;
+	font-size: 2.9em;
 	transition: 0.5s ease-in-out;
 }
 ul > li > a::after {
@@ -200,6 +201,7 @@ ul > li > a:hover::after {
 		transition: transform 0.3s 0.2s ease-in-out;
 	}
 	.upSideContact {
+		display: inline-block;
 		width: 98%;
 		text-align: center;
 		display: flex;
@@ -227,6 +229,7 @@ footer {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: 0.5fr auto auto;
+	margin: 25px 0 10px 0;
 }
 .logoFooter {
 	grid-column: 2/3;
@@ -319,7 +322,39 @@ footer {
 		grid-row: 5/6;
 	}
 }
+/* main styling */
 main {
+	font-family: 'Merriweather', serif;
 	grid-column: 1/13;
-	overflow-wrap: break-word;
+	margin: 8.5em 0;
+}
+.menuButoon {
+	width: 220px;
+	height: 200px;
+
+	border: none;
+}
+.menuButoon a {
+	text-decoration: none;
+	display: flex;
+	position: relative;
+}
+.menuButoon img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	margin: 2px;
+	justify-items: center;
+	align-items: center;
+}
+.menuButoon a::after {
+	content: 'MENU';
+	position: absolute;
+	top: 43%;
+	left: 40%;
+	font-size: 1.8em;
+	color: var(--darkgreen);
+	cursor: pointer;
+	font-family: 'Englebert', sans-serif;
+	font-weight: 900;
 }
