@@ -9,14 +9,13 @@ hamburger.addEventListener('click', handleClick);
 
 // First side main gallery
 
-let slideshowInterval;
 let currentNumber = 1;
 
-function showSlide(newNumber) {
+function showSlide(Number) {
 	document.querySelector('.mainActive').classList.remove('mainActive');
-	document.querySelector('#photo' + newNumber).classList.add('mainActive');
+	document.querySelector('#photo' + Number).classList.add('mainActive');
 	document.querySelector('.selectDot').classList.remove('selectDot');
-	document.querySelector('#dot' + newNumber).classList.add('selectDot');
+	document.querySelector('#dot' + Number).classList.add('selectDot');
 }
 function showSlide1() {
 	showSlide(1);
@@ -28,20 +27,30 @@ function showSlide3() {
 	showSlide(3);
 }
 
-for (let numerPinu = 1; numerPinu <= 3; numerPinu++) {
-	document
-		.querySelector('#dot' + numerPinu)
-		.addEventListener('click', function () {
-			showSlide(numerPinu);
-		});
-}
+document.querySelector('#dot1').addEventListener('click', function () {
+	showSlide1();
+});
+document.querySelector('#dot2').addEventListener('click', function () {
+	showSlide2();
+});
+document.querySelector('#dot3').addEventListener('click', function () {
+	showSlide3();
+});
+// for (let numerPinu = 1; numerPinu <= 3; numerPinu++) {
+// 	document
+// 		.querySelector('#dot' + numerPinu)
+// 		.addEventListener('click', function () {
+// 			showSlide(numerPinu);
+// 		});
+// }
 
 function showNextSlide() {
 	let newNumber = currentNumber++;
 
-	if (newNumber > 3) {
-		newNumber = 1;
+	if (currentNumber > 3) {
+		currentNumber = 1;
 	}
+	console.log(currentNumber);
 	showSlide(newNumber);
 }
 
