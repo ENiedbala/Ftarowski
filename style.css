@@ -20,7 +20,8 @@ body {
 	/* background-color: rgb(0, 0, 0); */
 }
 .container {
-	background-image: url(monstera1.png);
+	/* background-image: url(monstera1.png); */
+	background-color: black;
 	background-size: cover;
 	background-position: center;
 	background-attachment: scroll;
@@ -40,7 +41,7 @@ header {
 	height: 600px;
 	width: 100%;
 	/* object-fit: cover; */
-	background-image: url(patela6.jpg);
+	background-image: url(oliwki.jpg);
 	background-size: cover;
 	background-position: center;
 }
@@ -327,6 +328,8 @@ main {
 	font-family: 'Merriweather', serif;
 	grid-column: 1/13;
 	margin: 8.5em 0;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
 }
 .menuButoon {
 	width: 220px;
@@ -357,4 +360,47 @@ main {
 	cursor: pointer;
 	font-family: 'Englebert', sans-serif;
 	font-weight: 900;
+}
+.firstSideGalleryWrapper {
+	grid-column: 1/8;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.mainPhoto {
+	display: none;
+}
+.firstSideGalleryWrapper .mainActive {
+	width: 55em;
+	height: 60em;
+
+	display: inline-block;
+}
+.mainPhoto img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: top;
+	padding: 15px;
+}
+.mainAboutRestaurant {
+	grid-column: 8/12;
+}
+.firstSideGalleryWrapper > ul {
+	display: inline-flex;
+	width: 15%;
+}
+.firstSideGalleryWrapper > ul > li {
+	list-style: none;
+	text-decoration: none;
+}
+.pin {
+	align-items: center;
+	border-radius: 50%;
+	width: 16px;
+	height: 16px;
+	background-color: var(--gold);
+}
+.selectDot {
+	background-color: var(--pink);
 }
