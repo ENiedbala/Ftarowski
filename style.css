@@ -41,7 +41,7 @@ header {
 	height: 600px;
 	width: 100%;
 	/* object-fit: cover; */
-	background-image: url(oliwki.jpg);
+	background-image: url(restauracja2.jpg);
 	background-size: cover;
 	background-position: center;
 }
@@ -64,12 +64,14 @@ nav {
 	top: 0;
 	background-color: rgba(0, 0, 0, 0.842);
 	grid-column: 1/13;
+	z-index: 1;
 }
 .navbar {
 	width: 100%;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+	z-index: 1;
 }
 .Logo {
 	width: 10%;
@@ -184,7 +186,7 @@ ul > li > a:hover::after {
 		right: 0px;
 	}
 
-	ul {
+	.navi > ul {
 		position: absolute;
 		right: -15px;
 
@@ -203,7 +205,7 @@ ul > li > a:hover::after {
 	}
 	.upSideContact {
 		display: inline-block;
-		width: 98%;
+		width: 100%;
 		text-align: center;
 		display: flex;
 		justify-content: space-around;
@@ -332,26 +334,22 @@ main {
 	grid-template-columns: repeat(12, 1fr);
 }
 .menuButoon {
-	width: 220px;
-	height: 200px;
-
-	border: none;
+	width: 160px;
+	height: 160px;
+	border-radius: 50%;
+	border: 1px solid --green;
+	background-color: #213b2a;
+	cursor: pointer;
 }
 .menuButoon a {
 	text-decoration: none;
-	display: flex;
+	color: var(--gold);
+
 	position: relative;
 }
-.menuButoon img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	margin: 2px;
-	justify-items: center;
-	align-items: center;
-}
-.menuButoon a::after {
-	content: 'MENU';
+
+.menuButoon ::after {
+	content: '';
 	position: absolute;
 	top: 43%;
 	left: 40%;
@@ -362,18 +360,30 @@ main {
 	font-weight: 900;
 }
 .firstSideGalleryWrapper {
+	z-index: 0;
 	grid-column: 1/8;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	overflow: hidden;
+}
+.wrapper {
+	display: flex;
+	flex-direction: row;
+	overflow: hidden;
 }
 .mainPhoto {
-	display: none;
+	/* display: none; */
+	width: 0em;
+	height: 50em;
+	transform: translate(-120%);
+	transition: 7s linear transform;
 }
 .firstSideGalleryWrapper .mainActive {
-	width: 55em;
-	height: 60em;
+	width: 50em;
+	height: 50em;
 
+	transform: translateX(200%);
 	display: inline-block;
 }
 .mainPhoto img {
@@ -385,6 +395,9 @@ main {
 }
 .mainAboutRestaurant {
 	grid-column: 8/12;
+	justify-content: center;
+
+	text-align: center;
 }
 .firstSideGalleryWrapper > ul {
 	display: inline-flex;
@@ -403,4 +416,12 @@ main {
 }
 .selectDot {
 	background-color: var(--pink);
+}
+@media only screen and (max-width: 970px) {
+	.firstSideGalleryWrapper {
+		grid-column: 2/12;
+	}
+	.mainAboutRestaurant {
+		grid-column: 2/12;
+	}
 }

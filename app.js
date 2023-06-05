@@ -27,22 +27,13 @@ function showSlide3() {
 	showSlide(3);
 }
 
-document.querySelector('#dot1').addEventListener('click', function () {
-	showSlide1();
-});
-document.querySelector('#dot2').addEventListener('click', function () {
-	showSlide2();
-});
-document.querySelector('#dot3').addEventListener('click', function () {
-	showSlide3();
-});
-// for (let numerPinu = 1; numerPinu <= 3; numerPinu++) {
-// 	document
-// 		.querySelector('#dot' + numerPinu)
-// 		.addEventListener('click', function () {
-// 			showSlide(numerPinu);
-// 		});
-// }
+for (let numerPinu = 1; numerPinu <= 3; numerPinu++) {
+	document
+		.querySelector('#dot' + numerPinu)
+		.addEventListener('click', function () {
+			showSlide(numerPinu);
+		});
+}
 
 function showNextSlide() {
 	let newNumber = currentNumber++;
@@ -54,6 +45,4 @@ function showNextSlide() {
 	showSlide(newNumber);
 }
 
-setInterval(showNextSlide, 2000);
-
-// showSlideStart();
+setInterval(showNextSlide, 5000);
