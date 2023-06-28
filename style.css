@@ -16,11 +16,11 @@ body {
 	font-size: 12px;
 	overflow-x: hidden;
 	overflow-wrap: break-word;
+	height: auto;
 	font-family: 'Lora', serif;
-	/* background-color: rgb(0, 0, 0); */
 }
 .container {
-	/* background-image: url(monstera1.png); */
+	overflow-x: hidden;
 	background-color: black;
 	background-size: cover;
 	background-position: center;
@@ -47,9 +47,10 @@ h2 {
 
 header {
 	grid-column: 1/13;
-	height: 600px;
+	min-height: 700px;
 	width: 100%;
-	/* object-fit: cover; */
+	margin-top: 10em;
+	margin-bottom: 7em;
 	background-image: url(restauracja2.jpg);
 	background-size: cover;
 	background-position: center;
@@ -69,8 +70,9 @@ header {
 }
 /* nav styling */
 nav {
-	position: sticky;
+	position: fixed;
 	top: 0;
+	left: 0;
 	background-color: rgba(0, 0, 0, 0.842);
 	grid-column: 1/13;
 	z-index: 1;
@@ -241,7 +243,7 @@ footer {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: 0.5fr auto auto;
-	margin: 25px 0 10px 0;
+	margin: 7.5em 0 10px 0;
 }
 .logoFooter {
 	grid-column: 2/3;
@@ -338,10 +340,12 @@ footer {
 main {
 	font-family: 'Merriweather', serif;
 	grid-column: 1/13;
-	margin: 8.5em 0;
+	width: 100%;
+	margin: 0.5em 0;
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	position: relative;
+	height: auto;
 }
 .menuButoon {
 	width: 100px;
@@ -402,7 +406,7 @@ main {
 	background-color: rgba(0, 0, 0, 0.411);
 	position: absolute;
 	top: 5%;
-	left: 0;
+	left: 3%;
 }
 .mainAboutRestaurant > h1 {
 	text-align: center;
@@ -425,7 +429,7 @@ main {
 	position: relative;
 }
 .wrapper {
-	width: 100%;
+	width: 55%;
 	height: 100%;
 }
 .carousellWrapper {
@@ -434,14 +438,14 @@ main {
 	gap: 10px;
 	flex-shrink: 1;
 }
-.carousellWrapper img {
+.carousellSlide img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
 .carousellSlide {
 	position: relative;
-	min-width: 0;
+
 	flex-shrink: 0;
 	height: 800px;
 	display: flex;
@@ -466,4 +470,93 @@ main {
 		text-align: center;
 		margin-top: 5%;
 	}
+	.mainAboutRestaurant > h2 {
+		margin: 1em 1em;
+	}
+}
+
+/* styling restaurant menu */
+
+.menuWrap {
+	grid-column: 3/11;
+	margin-top: 1em;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	justify-items: center;
+	color: black;
+	width: 100%;
+	height: auto;
+	background-color: #f3e3e6;
+	border: solid 1em #d5b66d;
+	border-block-color: #cc981fe3;
+}
+.logoMenuWrap {
+	grid-column: 3/11;
+	margin-top: 10em;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	justify-items: center;
+	color: black;
+	width: 100%;
+	height: auto;
+	background-color: #f3e3e6;
+	border: solid 1em #d5b66d;
+	border-block-color: #cc981fe3;
+}
+.menuWrap ul {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: first baseline;
+}
+.menuWrap ul > li {
+	list-style: inside;
+}
+.menuWrap url {
+	width: 1em;
+	height: 1em;
+}
+.menuWrap h2 {
+	font-size: large;
+	color: black;
+	margin-left: 2em;
+}
+.menuContact {
+	width: 13%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	background-color: #080808a2;
+	font-size: 1.5em;
+	position: fixed;
+	top: 10em;
+	left: 1.5em;
+	padding-bottom: 2em;
+	border-left: solid 1px #4d0f1a6c;
+	border-right: solid 1px #4d0f1a6c;
+	box-shadow: 4px 2px 22px #5a28316c;
+}
+.menuContact a {
+	text-decoration: none;
+	color: beige;
+}
+.menuContact span {
+	margin-top: 2em;
+	font-size: 0.8em;
+}
+.menuLogo {
+	margin: 1em auto 1em;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+}
+.menuLogo h1 {
+	display: block;
+	color: black;
+}
+.menuLogo img {
+	width: 20%;
 }
