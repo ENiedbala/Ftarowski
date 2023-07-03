@@ -556,6 +556,88 @@ main {
 	margin-left: 2em;
 	padding: 1.5em 1em 0 1em;
 }
+.starters {
+	background-image: url(noz1.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	color: beige;
+}
+
+.greekFish {
+	background-image: url(noz2.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	color: beige;
+}
+.pasta {
+	background-image: url(pomidor.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	color: beige;
+}
+.foodAdditives {
+	background-image: url(reka.jpg);
+	background-size: cover;
+	background-position: start;
+	background-attachment: fixed;
+	color: beige;
+}
+
+.hotDrinks {
+	background-image: url(ogien.jpg);
+	background-size: cover;
+	background-position: start;
+	background-attachment: fixed;
+	color: beige;
+}
+.drinks {
+	background-image: url(owoce_male.jpg);
+	background-size: cover;
+	background-position: start;
+	background-attachment: fixed;
+	color: beige;
+}
+
+.starters h2 {
+	color: beige;
+}
+.greekFish h2 {
+	color: beige;
+}
+.pasta h2 {
+	color: beige;
+}
+.foodAdditives h2 {
+	color: beige;
+}
+.hotDrinks h2 {
+	color: beige;
+}
+.drinks h2 {
+	color: beige;
+}
+
+.starters > ul {
+	background-color: rgba(0, 0, 0, 0.158);
+}
+.greekFish > ul {
+	background-color: rgba(0, 0, 0, 0.158);
+}
+.pasta > ul {
+	background-color: rgba(0, 0, 0, 0.158);
+}
+.foodAdditives > ul {
+	background-color: rgba(0, 0, 0, 0.158);
+}
+.hotDrinks > ul {
+	background-color: rgba(0, 0, 0, 0.158);
+}
+.drinks > ul {
+	background-color: rgba(0, 0, 0, 0.158);
+}
 .menuContact {
 	width: 13%;
 	height: 50vh;
@@ -571,6 +653,7 @@ main {
 	border-radius: 5px;
 	box-shadow: 5px 0px 7px #cc981f4f;
 }
+
 .menuContact a {
 	text-decoration: none;
 	color: beige;
