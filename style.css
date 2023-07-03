@@ -490,6 +490,7 @@ main {
 	background-color: #f3e3e6;
 	border: solid 1em #d5b66d;
 	border-block-color: #cc981fe3;
+	box-shadow: 5px 6px 17px #cc981fb0;
 }
 .logoMenuWrap {
 	grid-column: 3/11;
@@ -510,9 +511,40 @@ main {
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: first baseline;
+	width: 100%;
+	padding: 3.5em;
 }
 .menuWrap ul > li {
 	list-style: inside;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 1em;
+	border-bottom: 1px dashed #d5b66dfb;
+}
+.orangeJuice .drinksList1 {
+	padding: 0;
+}
+.orangeJuice .drinksList1 > li {
+	padding: 1em 0 0 1.5em;
+}
+.orangeJuice .drinksList2 {
+	padding: 0;
+}
+.orangeJuice .drinksList2 > li {
+	padding: 1em 0 0 1.5em;
+}
+.menuWrap .orangeJuice {
+	width: 100%;
+}
+.alkoholPosition4 {
+	flex-direction: column;
+}
+.alkoholPosition4 > ul {
+	padding: 0;
+}
+.alkoholPosition4 > ul > li {
+	padding: 1em 0 0 1.5em;
 }
 .menuWrap url {
 	width: 1em;
@@ -522,22 +554,22 @@ main {
 	font-size: large;
 	color: black;
 	margin-left: 2em;
+	padding: 1.5em 1em 0 1em;
 }
 .menuContact {
 	width: 13%;
-	height: auto;
+	height: 50vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	background-color: #080808a2;
+	background-image: url(monstera.png);
 	font-size: 1.5em;
 	position: fixed;
 	top: 10em;
 	left: 1.5em;
 	padding-bottom: 2em;
-	border-left: solid 1px #4d0f1a6c;
-	border-right: solid 1px #4d0f1a6c;
-	box-shadow: 4px 2px 22px #5a28316c;
+	border-radius: 5px;
+	box-shadow: 5px 0px 7px #cc981f4f;
 }
 .menuContact a {
 	text-decoration: none;
