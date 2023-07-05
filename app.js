@@ -39,3 +39,63 @@ hamburger.addEventListener('click', handleClick);
 			index = ++index % slides.length;
 		}
 	})();
+
+// restaurant menu Photo of the dish
+const menuWrap = document.querySelector('.dishPhotoWrapper');
+const startersPosition = document.querySelectorAll('.startersPosition');
+const StarterPhoto = document.querySelector('.photoActive');
+const dishPhotoNumber = document.querySelector('.startersPhoto1');
+
+startersPosition.forEach(function (item) {
+	let currentNumber;
+	let newNumber = currentNumber;
+	item.addEventListener('click', e => {
+		menuWrap.classList.add('activeWraper');
+
+		const showdishPhoto = currentNumber => {
+			document.querySelector('.photoActive').classList.remove('photoActive');
+			document
+				.querySelector('.startersPhoto' + currentNumber)
+				.classList.add('photoActive');
+		};
+		if (e.currentTarget.classList.contains('starter' + 1)) {
+			showdishPhoto(1);
+		}
+		if (e.currentTarget.classList.contains('starter' + 2)) {
+			showdishPhoto(2);
+		}
+		if (e.currentTarget.classList.contains('starter' + 3)) {
+			showdishPhoto(3);
+		}
+		if (e.currentTarget.classList.contains('starter' + 4)) {
+			showdishPhoto(4);
+		}
+		if (e.currentTarget.classList.contains('starter' + 5)) {
+			showdishPhoto(5);
+		}
+		if (e.currentTarget.classList.contains('starter' + 6)) {
+			showdishPhoto(6);
+		}
+		if (e.currentTarget.classList.contains('starter' + 7)) {
+			showdishPhoto(7);
+		}
+		if (e.currentTarget.classList.contains('starter' + 8)) {
+			showdishPhoto(8);
+		}
+		if (e.currentTarget.classList.contains('starter' + 9)) {
+			showdishPhoto(9);
+		}
+		if (e.currentTarget.classList.contains('starter' + 10)) {
+			showdishPhoto(10);
+		}
+		if (e.currentTarget.classList.contains('starter' + 11)) {
+			showdishPhoto(11);
+		}
+		if (e.currentTarget.classList.contains('starter' + 12)) {
+			showdishPhoto(12);
+		}
+		if (e.currentTarget.classList.contains('starter' + 13)) {
+			showdishPhoto(13);
+		}
+	});
+});

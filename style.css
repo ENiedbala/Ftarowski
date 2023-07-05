@@ -487,7 +487,7 @@ main {
 	color: black;
 	width: 100%;
 	height: auto;
-	/* background-color: #f3e3e6; */
+
 	border: solid 1em #d5b66d;
 	border-block-color: #cc981fe3;
 	box-shadow: 5px 6px 17px #cc981fb0;
@@ -527,6 +527,12 @@ main {
 	width: 100%;
 	padding: 1em;
 	border-bottom: 1px dashed #d5b66dfb;
+	cursor: pointer;
+	font-size: 1.17em;
+}
+.menuWrap ul > li:hover {
+	font-size: 1.5em;
+	transition: 0.5s ease-in-out;
 }
 .orangeJuice .drinksList1 {
 	padding: 0;
@@ -630,9 +636,12 @@ main {
 	background-color: rgba(0, 0, 0, 0.158);
 }
 .dishPhotoWrapper {
-	grid-column: 4/9;
+	display: none;
+}
+.activeWraper {
 	display: flex;
 	flex-direction: column;
+	grid-column: 4/9;
 	padding: 1em;
 	border: 1px solid #112518;
 	background-color: #1b3323;
@@ -662,7 +671,6 @@ main {
 	display: block;
 	width: 100%;
 	height: 100%;
-	background-color: #509767;
 }
 
 .menuContact {
