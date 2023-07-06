@@ -45,7 +45,7 @@ const menuWrap = document.querySelector('.dishPhotoWrapper');
 const startersPosition = document.querySelectorAll('.startersPosition');
 const StarterPhoto = document.querySelector('.photoActive');
 const dishPhotoNumber = document.querySelector('.startersPhoto1');
-
+const closePhotoWraper = document.querySelector('.closePhotoWraper');
 startersPosition.forEach(function (item) {
 	let currentNumber;
 	let newNumber = currentNumber;
@@ -97,5 +97,8 @@ startersPosition.forEach(function (item) {
 		if (e.currentTarget.classList.contains('starter' + 13)) {
 			showdishPhoto(13);
 		}
+	});
+	closePhotoWraper.addEventListener('click', () => {
+		menuWrap.classList.remove('activeWraper');
 	});
 });

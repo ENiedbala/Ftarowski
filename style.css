@@ -512,6 +512,7 @@ main {
 	border: solid 1em #d5b66d;
 	border-block-color: #cc981fe3;
 }
+
 .menuWrap ul {
 	display: flex;
 	flex-direction: column;
@@ -643,14 +644,47 @@ main {
 	flex-direction: column;
 	grid-column: 4/9;
 	padding: 1em;
-	border: 1px solid #112518;
-	background-color: #1b3323;
+	border: 1px solid #ce7a8a;
+	border-radius: 5px;
+	box-shadow: 0px 1px 8px 7px rgba(223, 150, 172, 0.2);
+	background-color: #0f1110;
 	position: fixed;
 	width: 40%;
 	height: 70vh;
-	top: 18vh;
+
+	bottom: 2%;
 	left: 50%;
 	z-index: 0;
+}
+.activeWraper .closePhotoWraper {
+	width: 2vw;
+	height: 2vw;
+	border: 0.1em solid rgb(209, 201, 166);
+	border-radius: 30%;
+	padding: 0.5em;
+
+	background: transparent;
+	position: relative;
+	cursor: pointer;
+}
+.closePhotoWraper span {
+	border-bottom: 0.2em solid rgb(165, 158, 128);
+	position: absolute;
+	content: '';
+}
+.closePhotoWraper #first {
+	rotate: 45deg;
+	top: 13%;
+	left: 10%;
+	width: 120%;
+	height: 50%;
+}
+.closePhotoWraper #second {
+	rotate: -45deg;
+	top: 13%;
+	right: 10%;
+	width: 120%;
+	height: 50%;
 }
 .dishPhotoList {
 	width: 100%;
@@ -705,8 +739,49 @@ main {
 }
 .menuLogo h1 {
 	display: block;
-	color: beige;
+	color: black;
 }
 .menuLogo img {
 	width: 20%;
+}
+@media only screen and (max-width: 970px) {
+	.menuContact {
+		position: fixed;
+		width: 98%;
+		height: auto;
+		bottom: 0;
+		left: 0;
+		top: auto;
+		flex-direction: row;
+
+		flex-wrap: wrap;
+		margin: 0.5em;
+	}
+	.logoMenuWrap {
+		grid-column: 2/12;
+		margin-top: 10em;
+	}
+	.logoMenuWrap > h1 {
+		color: black;
+	}
+	.menuContact span {
+		margin-top: 0.5em;
+		font-size: 1em;
+	}
+	.menuWrap {
+		grid-column: 2/12;
+	}
+	.menuWrap ul {
+		padding: 0;
+	}
+	.activeWraper {
+		padding: 0.7em;
+
+		max-width: 100%;
+		min-width: 80%;
+		max-height: 40vh;
+
+		bottom: 15em;
+		left: 10%;
+	}
 }
