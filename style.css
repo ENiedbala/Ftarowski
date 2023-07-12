@@ -15,6 +15,7 @@
 body {
 	font-size: 12px;
 	overflow-x: hidden;
+	overflow-y: scroll;
 	overflow-wrap: break-word;
 	height: auto;
 	font-family: 'Lora', serif;
@@ -476,7 +477,24 @@ main {
 }
 
 /* styling restaurant menu */
-
+.Photo {
+	display: grid;
+	grid-template-rows: 0fr;
+	padding: 0.8em;
+	transition: grid-template-rows 500ms;
+	width: 130%;
+}
+.Photo > div {
+	overflow: hidden;
+}
+.Photoactive {
+	grid-template-rows: 1fr;
+}
+.Photo img {
+	width: 100%;
+	height: 60vh;
+	object-fit: cover;
+}
 .menuWrap {
 	grid-column: 3/11;
 	margin-top: 1em;
@@ -531,10 +549,10 @@ main {
 	cursor: pointer;
 	font-size: 1.17em;
 }
-.menuWrap ul > li:hover {
+/* .menuWrap ul > li:hover {
 	font-size: 1.5em;
 	transition: 0.5s ease-in-out;
-}
+} */
 .orangeJuice .drinksList1 {
 	padding: 0;
 }
@@ -636,77 +654,21 @@ main {
 .alkohols > ul {
 	background-color: rgba(0, 0, 0, 0.158);
 }
-.dishPhotoWrapper {
+/* .dishPhoto {
 	display: none;
-}
-.activeWraper {
-	display: flex;
-	flex-direction: column;
-	grid-column: 4/9;
-	padding: 1em;
-	border: 1px solid #ce7a8a;
-	border-radius: 5px;
-	box-shadow: 0px 1px 8px 7px rgba(223, 150, 172, 0.2);
-	background-color: #0f1110;
-	position: fixed;
-	width: 40%;
-	height: 70vh;
-
-	bottom: 2%;
-	left: 50%;
-	z-index: 0;
-}
-.activeWraper .closePhotoWraper {
-	width: 2vw;
-	height: 2vw;
-	border: 0.1em solid rgb(209, 201, 166);
-	border-radius: 30%;
-	padding: 0.5em;
-
-	background: transparent;
-	position: relative;
-	cursor: pointer;
-}
-.closePhotoWraper span {
-	border-bottom: 0.2em solid rgb(165, 158, 128);
-	position: absolute;
-	content: '';
-}
-.closePhotoWraper #first {
-	rotate: 45deg;
-	top: 13%;
-	left: 10%;
-	width: 120%;
-	height: 50%;
-}
-.closePhotoWraper #second {
-	rotate: -45deg;
-	top: 13%;
-	right: 10%;
-	width: 120%;
-	height: 50%;
-}
-.dishPhotoList {
-	width: 100%;
-	height: 80%;
+	background-color: #509767;
+	color: rgb(252, 250, 250);
 }
 .dishPhoto img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
-.dishPhoto {
-	display: none;
-	background-color: #509767;
-	color: rgb(252, 250, 250);
-}
-
 .photoActive {
 	display: block;
 	width: 100%;
 	height: 100%;
-}
-
+} */
 .menuContact {
 	width: 13%;
 	height: 50vh;
@@ -783,5 +745,10 @@ main {
 
 		bottom: 15em;
 		left: 10%;
+	}
+}
+@media only screen and (max-width: 970px) {
+	.Photo {
+		width: 110%;
 	}
 }
