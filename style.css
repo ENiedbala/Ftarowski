@@ -549,10 +549,7 @@ main {
 	cursor: pointer;
 	font-size: 1.17em;
 }
-/* .menuWrap ul > li:hover {
-	font-size: 1.5em;
-	transition: 0.5s ease-in-out;
-} */
+
 .orangeJuice .drinksList1 {
 	padding: 0;
 }
@@ -654,21 +651,7 @@ main {
 .alkohols > ul {
 	background-color: rgba(0, 0, 0, 0.158);
 }
-/* .dishPhoto {
-	display: none;
-	background-color: #509767;
-	color: rgb(252, 250, 250);
-}
-.dishPhoto img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-.photoActive {
-	display: block;
-	width: 100%;
-	height: 100%;
-} */
+
 .menuContact {
 	width: 13%;
 	height: 50vh;
@@ -746,9 +729,48 @@ main {
 		bottom: 15em;
 		left: 10%;
 	}
-}
-@media only screen and (max-width: 970px) {
 	.Photo {
 		width: 110%;
 	}
+}
+
+/* styling catering page */
+
+.cateringInfo {
+	margin-top: 10em;
+	grid-column: 4/10;
+	justify-content: center;
+	text-align: center;
+}
+.cateringInfo > p {
+	font-size: 1.5em;
+}
+
+.cateringList > ul {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	margin: auto;
+	width: 60%;
+	align-items: start;
+}
+
+.cateringList > ul > li {
+	font-size: 1.5em;
+	list-style: none;
+	position: relative;
+	margin: 0.5em;
+}
+.cateringList > ul > li::before {
+	content: '';
+	position: absolute;
+	top: -0.5em;
+	left: -3em;
+	display: inline-block;
+	height: 2.5em;
+	width: 2.5em;
+	background-image: url('logo.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin-left: 0px;
 }
