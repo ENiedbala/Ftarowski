@@ -239,12 +239,13 @@ ul > li > a:hover::after {
 }
 /* Footer styling */
 footer {
-	background-color: #1b2922a6;
+	background-color: #121614;
 	grid-column: 1/13;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: 0.5fr auto auto;
 	margin: 7.5em 0 10px 0;
+	z-index: 2;
 }
 .logoFooter {
 	grid-column: 2/3;
@@ -265,7 +266,7 @@ footer {
 	flex-direction: column;
 	align-items: start;
 	margin-left: 50px;
-	font-size: 1.8em;
+	font-size: 1.6em;
 }
 .adressFooter a {
 	text-decoration: none;
@@ -293,7 +294,7 @@ footer {
 	grid-column: 3/4;
 	grid-row: 2/3;
 	display: flex;
-	font-size: 1.7em;
+	font-size: 1.6em;
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: space-around;
@@ -477,12 +478,13 @@ main {
 }
 
 /* styling restaurant menu */
+
 .Photo {
 	display: grid;
 	grid-template-rows: 0fr;
 	padding: 0.8em;
 	transition: grid-template-rows 500ms;
-	width: 130%;
+	width: 110%;
 }
 .Photo > div {
 	overflow: hidden;
@@ -492,7 +494,7 @@ main {
 }
 .Photo img {
 	width: 100%;
-	height: 60vh;
+	height: 75vh;
 	object-fit: cover;
 }
 .menuWrap {
@@ -518,7 +520,7 @@ main {
 
 .logoMenuWrap {
 	grid-column: 3/11;
-	margin-top: 10em;
+	margin-top: 13em;
 	align-content: center;
 	align-items: center;
 	justify-content: center;
@@ -526,7 +528,7 @@ main {
 	color: black;
 	width: 100%;
 	height: auto;
-	background-color: #f3e3e6;
+	background-color: beige;
 	border: solid 1em #d5b66d;
 	border-block-color: #cc981fe3;
 }
@@ -537,7 +539,7 @@ main {
 	justify-content: space-between;
 	align-items: first baseline;
 	width: 100%;
-	padding: 3.5em;
+	padding: 2.5em;
 }
 .menuWrap ul > li {
 	list-style: inside;
@@ -547,17 +549,28 @@ main {
 	padding: 1em;
 	border-bottom: 1px dashed #d5b66dfb;
 	cursor: pointer;
-	font-size: 1.17em;
+	font-size: 2.4em;
 }
-
+.menuPosition > .withPhoto::before {
+	content: 'Kliknij aby zobaczyć zdjęcie';
+	display: none;
+	font-size: 0.4em;
+	color: #d6546c;
+	font-style: italic;
+}
+.menuPosition > .withPhoto:hover::before {
+	display: block;
+}
 .orangeJuice .drinksList1 {
 	padding: 0;
+	font-size: 0.3em;
 }
 .orangeJuice .drinksList1 > li {
 	padding: 1em 0 0 1.5em;
 }
 .orangeJuice .drinksList2 {
 	padding: 0;
+	font-size: 0.3em;
 }
 .orangeJuice .drinksList2 > li {
 	padding: 1em 0 0 1.5em;
@@ -575,8 +588,13 @@ main {
 	padding: 1em 0 0 1.5em;
 }
 
+.menuPosition .wine {
+	font-size: 0.8em;
+}
+
 .menuWrap h2 {
-	font-size: large;
+	font-size: 2.4em;
+	font-weight: bold;
 	color: black;
 	margin-left: 2em;
 	padding: 1.5em 1em 0 1em;
@@ -658,7 +676,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	background-image: url(monstera.png);
+	/* background-image: url(monstera.png); */
 	font-size: 1.5em;
 	position: fixed;
 	top: 10em;
@@ -719,6 +737,9 @@ main {
 	.menuWrap ul {
 		padding: 0;
 	}
+	.menuWrap ul > li {
+		font-size: 1.5em;
+	}
 	.activeWraper {
 		padding: 0.7em;
 
@@ -735,15 +756,34 @@ main {
 }
 
 /* styling catering page */
-
+.cateringInfoWrapper {
+	margin: 10em auto;
+	grid-column: 2/12;
+	height: 100vh;
+	background-image: url('pexels-taha-samet-arslan-16962516.jpg');
+	background-position: 0 -5em;
+	background-size: cover;
+	background-repeat: no-repeat;
+	justify-content: center;
+	justify-items: center;
+}
 .cateringInfo {
 	margin-top: 10em;
+	padding: 5em;
+	width: 80vw;
 	grid-column: 4/10;
 	justify-content: center;
 	text-align: center;
+	background-color: rgba(0, 0, 0, 0.185);
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	color: var(--gold);
 }
 .cateringInfo > p {
 	font-size: 1.5em;
+	font-weight: bold;
+	text-shadow: 2px 2px rgb(34, 34, 34);
 }
 
 .cateringList > ul {
@@ -773,4 +813,26 @@ main {
 	background-size: contain;
 	background-repeat: no-repeat;
 	margin-left: 0px;
+}
+/*styling  Main contact  */
+.mainContactWrapper {
+	width: 100vw;
+	height: auto;
+	justify-content: center;
+	text-align: center;
+	color: var(--gold);
+}
+.logomainContact {
+	width: 20vw;
+	height: 33em;
+
+	margin: 15em auto 5em;
+}
+.logomainContact img {
+	height: 100%;
+	object-fit: cover;
+}
+.mainContactWrapper div {
+	width: 100vw;
+	padding: 5em 0 5em 0;
 }
