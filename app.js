@@ -50,3 +50,59 @@ for (let i = 0; i < Position.length; i++) {
 		}
 	});
 }
+
+const galleryImages = document.querySelectorAll('.photoGallery img');
+const popup = document.querySelector('.popup');
+const popup__close = document.querySelector('.popup__close');
+const popup__img = document.querySelector('.popup__img');
+const Gallery_LeftArrow = document.querySelector('.gallery__leftArrow');
+const Gallery_RightArrow = document.querySelector('.gallery__rightArrow');
+let CurrentIndex;
+const ShowNextImg = () => {
+	if (CurrentIndex === galleryImages.length - 1) {
+		CurrentIndex = 0;
+	} else {
+		CurrentIndex++;
+	}
+	popup__img.src = galleryImages[CurrentIndex].src;
+};
+const ShowPrevImg = () => {
+	if (CurrentIndex === 0) {
+		CurrentIndex = galleryImages.length - 1;
+	} else {
+		CurrentIndex--;
+	}
+	popup__img.src = galleryImages[CurrentIndex].src;
+};
+const CloseImg = () => {
+	popup.classList.add('fade-Out');
+	setTimeout(() => {
+		popup.classList.add('hidden');
+		popup.classList.remove('fade-Out');
+	}, 300);
+};
+
+galleryImages.forEach((image, index) => {
+	image.addEventListener('click', e => {
+		popup.classList.remove('hidden');
+		popup__img.src = e.target.src;
+		CurrentIndex = index;
+	});
+});
+popup__close.addEventListener('click', CloseImg);
+Gallery_LeftArrow.addEventListener('click', ShowPrevImg);
+Gallery_RightArrow.addEventListener('click', ShowNextImg);
+
+document.addEventListener('keydown', e => {
+	if (!popup.classList.contains('hidden')) {
+		if (e.code === 'ArrowRight' || e.keyCode === 39) {
+			ShowNextImg();
+		}
+		if (e.code === 'ArrowLeft' || e.keyCode === 37) {
+			ShowPrevImg();
+		}
+		if (e.code === 'Escape' || e.keyCode === 27) {
+			CloseImg();
+		}
+	}
+});
