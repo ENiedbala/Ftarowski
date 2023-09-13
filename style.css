@@ -239,7 +239,7 @@ ul > li > a:hover::after {
 }
 /* Footer styling */
 footer {
-	background-color: #121614;
+	background-color: #3a6c4a;
 	grid-column: 1/13;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -835,4 +835,132 @@ main {
 .mainContactWrapper div {
 	width: 100vw;
 	padding: 5em 0 5em 0;
+}
+/* Gallery styling */
+.GalleryWrapper {
+	grid-column: 2/12;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 15em auto;
+}
+#restauranGallery {
+	width: 100%;
+	justify-content: space-evenly;
+	margin: auto;
+	padding: 1em;
+	border-radius: 15px;
+	display: flex;
+	flex-wrap: wrap;
+	background: linear-gradient(60deg, #2a50373d, #427a55);
+}
+
+.GalleryWrapper > h1 {
+	text-align: center;
+	color: #ce7a8a;
+	align-self: center;
+	margin: 64px;
+}
+
+.photoGallery {
+	border: solid 1px #eee9e9a8;
+	border-radius: 5px;
+	box-shadow: 0 0 10px 1px #65a0798f;
+	cursor: pointer;
+	max-width: 220px;
+	max-height: 220px;
+	margin: 0.8em;
+	transform: scale(1);
+	transition: transform 0.3s;
+}
+.photoGallery:hover {
+	transform: scale(1.2);
+}
+.photoGallery img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 5px;
+}
+.popup {
+	display: flex;
+	animation: FadeInn 0.5s;
+	backdrop-filter: blur(5px);
+	flex-wrap: wrap;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 6em;
+	margin: auto;
+	background: rgba(0, 0, 0, 0.5);
+}
+.popup.hidden {
+	display: none;
+}
+.popup .fade-Out {
+	animation: fadeOut 0.5s both;
+}
+.gallery__leftArrow,
+.gallery__rightArrow {
+	cursor: pointer;
+
+	background: none;
+	color: #d6546c;
+	scale: (1);
+	font-size: 8em;
+	border: none;
+	position: absolute;
+	transition: transform 0.3s;
+}
+.gallery__leftArrow {
+	left: 20%;
+}
+.gallery__rightArrow {
+	right: 20%;
+}
+.gallery__leftArrow:hover,
+.gallery__rightArrow:hover,
+.popup__close:hover {
+	transform: scale(1.4);
+}
+
+.popup img {
+	width: 50%;
+	height: 80%;
+	object-fit: cover;
+	box-shadow: 0 0 10px 1px #65a0798f;
+}
+.popup__close {
+	font-size: 5em;
+	position: fixed;
+	color: #d6546c;
+	background: none;
+	top: 1em;
+	right: 4em;
+	z-index: 2;
+	cursor: pointer;
+	border: none;
+	scale: (1);
+	transition: transform 0.3s;
+}
+@keyframes FadeInn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes FadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
 }
