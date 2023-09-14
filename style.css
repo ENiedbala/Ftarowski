@@ -848,25 +848,34 @@ main {
 #restauranGallery {
 	width: 100%;
 	justify-content: space-evenly;
-	margin: auto;
-	padding: 1em;
-	border-radius: 15px;
-	display: flex;
-	flex-wrap: wrap;
-	background: linear-gradient(60deg, #2a50373d, #427a55);
+	border-top: 1px solid #d5b66d;
+	border-bottom: 1px solid #d5b66d;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 1em;
 }
-
-.GalleryWrapper > h1 {
+.GalleryPhotoHeader {
+	background-image: url('photos/salad4.jpg');
+	background-position: center;
+	margin: 3em 0;
+	width: 100%;
+	aspect-ratio: 9/3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.GalleryPhotoHeader > div {
+	background-color: rgba(0, 0, 0, 0.53);
+}
+.GalleryPhotoHeader > div > h1 {
 	text-align: center;
 	color: #ce7a8a;
 	align-self: center;
-	margin: 64px;
+	font-size: 5em;
 }
 
 .photoGallery {
-	border: solid 1px #eee9e9a8;
-	border-radius: 5px;
-	box-shadow: 0 0 10px 1px #65a0798f;
+	box-shadow: 0 0 5px 0px #d5b66d88;
 	cursor: pointer;
 	max-width: 220px;
 	max-height: 220px;
@@ -881,7 +890,7 @@ main {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	border-radius: 5px;
+	aspect-ratio: 1/1;
 }
 .popup {
 	display: flex;
@@ -933,7 +942,8 @@ main {
 	width: 50%;
 	height: 80%;
 	object-fit: cover;
-	box-shadow: 0 0 10px 1px #65a0798f;
+	box-shadow: 0 0 15px 0px #d5b66d88;
+	aspect-ratio: 1/1;
 }
 .popup__close {
 	font-size: 5em;
@@ -962,5 +972,17 @@ main {
 	}
 	100% {
 		opacity: 0;
+	}
+}
+
+@media only screen and (max-width: 970px) {
+	#restauranGallery {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	#restauranGallery {
+		grid-template-columns: repeat(2, 1fr);
 	}
 }

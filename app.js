@@ -76,6 +76,9 @@ const ShowPrevImg = () => {
 };
 const CloseImg = () => {
 	popup.classList.add('fade-Out');
+	galleryImages.forEach(element => {
+		element.setAttribute('tabindex', 1);
+	});
 	setTimeout(() => {
 		popup.classList.add('hidden');
 		popup.classList.remove('fade-Out');
@@ -83,10 +86,20 @@ const CloseImg = () => {
 };
 
 galleryImages.forEach((image, index) => {
-	image.addEventListener('click', e => {
+	const ShowPopup = e => {
 		popup.classList.remove('hidden');
 		popup__img.src = e.target.src;
 		CurrentIndex = index;
+		galleryImages.forEach(element => {
+			element.setAttribute('tabindex', -1);
+		});
+	};
+
+	image.addEventListener('click', ShowPopup);
+	image.addEventListener('keydown', e => {
+		if (e.code === 'Enter' || e.keyCode === 13) {
+			ShowPopup(e);
+		}
 	});
 });
 popup__close.addEventListener('click', CloseImg);
