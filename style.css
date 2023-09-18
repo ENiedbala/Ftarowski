@@ -52,7 +52,7 @@ header {
 	width: 100%;
 	margin-top: 10em;
 	margin-bottom: 7em;
-	background-image: url(restauracja2.jpg);
+	background-image: url(photos/restauracja2.jpg);
 	background-size: cover;
 	background-position: center;
 }
@@ -511,8 +511,8 @@ main {
 	border: solid 1em #d5b66d;
 	border-block-color: #cc981fe3;
 	box-shadow: 5px 6px 17px #cc981fb0;
-	/* background-image: url(noz1.jpg); */
-	background-color: black;
+	background-image: url(noz1.jpg);
+	/* background-color: black; */
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -801,7 +801,7 @@ main {
 }
 .cateringElementPhotoParty {
 	grid-column: 1/8;
-	height: 100vh;
+	height: 50vh;
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: repeat(4, 1fr);
