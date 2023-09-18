@@ -50,7 +50,7 @@ for (let i = 0; i < Position.length; i++) {
 		}
 	});
 }
-
+// RestaurantGallery
 const galleryImages = document.querySelectorAll('.photoGallery img');
 const popup = document.querySelector('.popup');
 const popup__close = document.querySelector('.popup__close');
