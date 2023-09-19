@@ -204,7 +204,7 @@ ul > li > a:hover::after {
 
 		top: 8em;
 		background-color: black;
-		height: 100vh;
+		height: 85vh;
 		flex-direction: column;
 		text-align: center;
 		justify-content: space-around;
@@ -478,7 +478,9 @@ main {
 }
 
 /* styling restaurant menu */
-
+.withPhoto {
+	width: 100%;
+}
 .Photo {
 	display: grid;
 	grid-template-rows: 0fr;
@@ -677,7 +679,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	/* background-image: url(monstera.png); */
+	background: black;
 	font-size: 1.5em;
 	position: fixed;
 	top: 10em;
