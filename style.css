@@ -496,7 +496,7 @@ main {
 }
 .Photo img {
 	width: 100%;
-	height: 75vh;
+	height: auto;
 	object-fit: cover;
 }
 .menuWrap {
@@ -711,6 +711,9 @@ main {
 	width: 20%;
 }
 @media only screen and (max-width: 970px) {
+	.menuWrap h2 {
+		font-size: 2.5em;
+	}
 	.menuContact {
 		position: fixed;
 		width: 98%;
@@ -742,6 +745,7 @@ main {
 	}
 	.menuWrap ul > li {
 		font-size: 1.5em;
+		padding: 0;
 	}
 	.activeWraper {
 		padding: 0.7em;
@@ -754,7 +758,8 @@ main {
 		left: 10%;
 	}
 	.Photo {
-		width: 110%;
+		width: 135%;
+		padding: 0;
 	}
 }
 
