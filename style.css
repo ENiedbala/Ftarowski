@@ -1070,6 +1070,22 @@ main {
 	#restauranGallery {
 		grid-template-columns: repeat(3, 1fr);
 	}
+	.popup img {
+		width: 100%;
+		height: auto;
+	}
+	.gallery__leftArrow {
+		left: 0;
+		bottom: 15%;
+	}
+	.gallery__rightArrow {
+		right: 0;
+		bottom: 15%;
+	}
+	.popup__close {
+		top: 2em;
+		right: 1em;
+	}
 }
 
 @media only screen and (max-width: 700px) {
