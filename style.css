@@ -880,7 +880,6 @@ main {
 
 @media only screen and (max-width: 970px) {
 	.cateringElementWrapper {
-		grid-template-rows: repeat(2, 1fr);
 		padding: 0;
 	}
 	.cateringElementPhotoParty {
