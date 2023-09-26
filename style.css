@@ -48,7 +48,7 @@ h2 {
 
 header {
 	grid-column: 1/13;
-	min-height: 580px;
+	min-height: 450px;
 	width: 100%;
 	margin-top: 11em;
 	margin-bottom: 7em;
@@ -470,6 +470,9 @@ main {
 		z-index: 0;
 		background-color: rgba(0, 0, 0, 0.274);
 		position: relative;
+	}
+	.carousellSlide {
+		height: 300px;
 	}
 	.mainAboutRestaurant > h1 {
 		text-align: center;
