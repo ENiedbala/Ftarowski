@@ -48,12 +48,12 @@ h2 {
 
 header {
 	grid-column: 1/13;
-	margin-top: 11em;
+	margin-top: 10em;
 	margin-bottom: 7em;
 }
 .PhotoheaderFirst {
 	width: 100%;
-	height: 80%;
+	height: 100%;
 	text-align: center;
 	display: grid;
 	background-image: url(photos/3sala3.jpg);
@@ -66,7 +66,7 @@ header {
 
 #PhotoheaderFrame {
 	grid-area: 3/3/15/23;
-	border: 3px solid #e6c8ce;
+	border: 2px solid #f7f4f5;
 	z-index: 1;
 }
 #PhotoheaderLogo {
@@ -81,36 +81,85 @@ header {
 #PhotoheaderPhone {
 	background-color: black;
 	border-radius: 15px;
-	grid-area: 14/4/16/8;
+	grid-area: 14/3/16/8;
 	z-index: 1;
+}
+#PhotoheaderPhone > p {
+	font-size: clamp(0.3rem, 3vw, 1.7rem);
+	color: #f3dce1;
 }
 #PhotoheaderName {
 	background-color: black;
-	border: 3px solid #fcfafa;
-	font-family: 'Special Elite', cursive;
-	font-weight: bold;
-	margin: auto;
-	padding: 2em;
-	font-size: 2.5em;
-	color: #c0a5a9;
-	grid-area: 11/9/17/17;
+	border: 2px solid #fcfafa;
+
+	grid-area: 11/9/16/17;
 	z-index: 1;
+}
+#PhotoheaderName h1 {
+	padding-top: 1em;
+	font-size: clamp(0.7rem, 3vw, 5rem);
+	font-family: 'Special Elite', cursive;
+	color: #f3dce1;
+	font-weight: bold;
+}
+#PhotoheaderName h3 {
+	font-size: clamp(0.7rem, 3vw, 5rem);
+	font-family: 'Smooch', cursive;
+	line-height: 0.9em;
+	color: #bb6366;
 }
 
 #PhotoheaderAdress {
 	background-color: black;
-	font-family: 'Englebert', sans-serif;
-	color: #ce7a8a;
-	grid-area: 14/18/16/22;
+
+	grid-area: 14/18/16/23;
 	border-radius: 15px;
 	z-index: 1;
 }
+#PhotoheaderAdress > p {
+	color: #f3dce1;
+	font-size: clamp(0.3rem, 3vw, 1.7rem);
+}
 #PhotoheaderBottomPink {
-	grid-area: 14/1/18/25;
+	grid-area: 13/1/18/25;
 	background-color: #bb6366;
 	z-index: 0;
 }
-
+@media only screen and (max-width: 970px) {
+	header {
+		margin-top: 19em;
+		margin-bottom: 1em;
+	}
+	#PhotoheaderName h3 {
+		line-height: 0;
+	}
+	#PhotoheaderName h1 {
+	}
+	#PhotoheaderAdress {
+		grid-area: 13/18/16/24;
+	}
+	#PhotoheaderPhone {
+		grid-area: 13/2/16/8;
+	}
+}
+@media only screen and (max-width: 425px) {
+	header {
+		margin-top: 11em;
+		margin-bottom: 1em;
+	}
+	#PhotoheaderName h1 {
+		padding-top: 0.5em;
+	}
+	#PhotoheaderName {
+		grid-area: 10/8/17/18;
+	}
+	#PhotoheaderAdress {
+		grid-area: 14/18/17/24;
+	}
+	#PhotoheaderPhone {
+		grid-area: 14/2/17/8;
+	}
+}
 /* nav styling */
 nav {
 	position: fixed;
