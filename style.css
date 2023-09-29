@@ -145,10 +145,10 @@ header {
 @media only screen and (max-width: 425px) {
 	header {
 		margin-top: 11em;
-		margin-bottom: 1em;
+		margin-bottom: 5em;
 	}
 	#PhotoheaderName h1 {
-		padding-top: 0.5em;
+		padding-top: 1.5em;
 	}
 	#PhotoheaderName {
 		grid-area: 10/8/17/18;
@@ -501,11 +501,13 @@ main {
 	left: 3%;
 }
 .mainAboutRestaurant > h1 {
+	font-size: clamp(1.5rem, 3vw, 5rem);
 	text-align: center;
 	margin-top: 15%;
 }
 .mainAboutRestaurant > h2 {
 	margin: 1em 5em;
+	font-size: clamp(1rem, 3vw, 1.1rem);
 }
 
 .firstSideGalleryWrapper > ul > li {
