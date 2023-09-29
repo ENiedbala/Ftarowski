@@ -48,31 +48,69 @@ h2 {
 
 header {
 	grid-column: 1/13;
-	min-height: 450px;
-	width: 100%;
 	margin-top: 11em;
 	margin-bottom: 7em;
-	background-image: url(photos/2sala.jpg);
-	background-size: cover;
-	background-position: center;
 }
-.upsideContactMain {
-	margin: 10em auto;
-	text-align: center;
-	color: goldenrod;
-}
-.upSideContact {
-	font-family: 'Merriweather', serif;
+.PhotoheaderFirst {
 	width: 100%;
+	height: 80%;
 	text-align: center;
-	display: flex;
-	justify-content: space-around;
-	margin: 0px auto 0;
-	padding: 2px 0;
-	font-size: 1em;
-	background-color: rgba(0, 0, 0, 0.842);
-	display: none;
+	display: grid;
+	background-image: url(photos/3sala3.jpg);
+	background-position: center;
+	background-size: cover;
+	background-attachment: ;
+	grid-template-columns: repeat(24, 1fr);
+	grid-template-rows: repeat(16, 1fr);
 }
+
+#PhotoheaderFrame {
+	grid-area: 3/3/15/23;
+	border: 3px solid #e6c8ce;
+	z-index: 1;
+}
+#PhotoheaderLogo {
+	grid-area: 2/10/9/16;
+	z-index: 1;
+}
+#PhotoheaderLogo img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+#PhotoheaderPhone {
+	background-color: black;
+	border-radius: 15px;
+	grid-area: 14/4/16/8;
+	z-index: 1;
+}
+#PhotoheaderName {
+	background-color: black;
+	border: 3px solid #fcfafa;
+	font-family: 'Special Elite', cursive;
+	font-weight: bold;
+	margin: auto;
+	padding: 2em;
+	font-size: 2.5em;
+	color: #c0a5a9;
+	grid-area: 11/9/17/17;
+	z-index: 1;
+}
+
+#PhotoheaderAdress {
+	background-color: black;
+	font-family: 'Englebert', sans-serif;
+	color: #ce7a8a;
+	grid-area: 14/18/16/22;
+	border-radius: 15px;
+	z-index: 1;
+}
+#PhotoheaderBottomPink {
+	grid-area: 14/1/18/25;
+	background-color: #bb6366;
+	z-index: 0;
+}
+
 /* nav styling */
 nav {
 	position: fixed;
@@ -80,7 +118,7 @@ nav {
 	left: 0;
 	background-color: rgba(0, 0, 0, 0.842);
 	grid-column: 1/13;
-	z-index: 1;
+	z-index: 2;
 }
 .navbar {
 	width: 100%;
@@ -450,7 +488,6 @@ main {
 }
 .carousellSlide {
 	position: relative;
-
 	flex-shrink: 0;
 	height: 450px;
 	display: flex;
@@ -480,6 +517,11 @@ main {
 	}
 	.mainAboutRestaurant > h2 {
 		margin: 1em 1em;
+	}
+}
+@media screen and (max-width: 970px) {
+	.carousellSlide {
+		height: 300px;
 	}
 }
 
