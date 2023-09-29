@@ -129,6 +129,7 @@ header {
 	header {
 		margin-top: 19em;
 		margin-bottom: 1em;
+		height: 70vh;
 	}
 	#PhotoheaderName h3 {
 		line-height: 0;
@@ -151,13 +152,13 @@ header {
 		padding-top: 1.5em;
 	}
 	#PhotoheaderName {
-		grid-area: 10/8/17/18;
+		grid-area: 12/8/16/18;
 	}
 	#PhotoheaderAdress {
-		grid-area: 14/18/17/24;
+		grid-area: 14/18/16/24;
 	}
 	#PhotoheaderPhone {
-		grid-area: 14/2/17/8;
+		grid-area: 14/2/16/8;
 	}
 }
 /* nav styling */
