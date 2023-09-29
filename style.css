@@ -816,15 +816,14 @@ main {
 	}
 	.menuContact {
 		position: fixed;
-		width: 98%;
-		height: auto;
+		width: 99%;
+		height: 6vh;
 		bottom: 0;
 		left: 0;
 		top: auto;
 		flex-direction: column;
-
 		flex-wrap: wrap;
-		margin: 0.5em;
+		font-size: 14px;
 	}
 	.menuContact > #open {
 		display: none;
