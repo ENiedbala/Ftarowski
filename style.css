@@ -633,12 +633,9 @@ main {
 	border: solid 1em #d5b66d;
 	border-block-color: #cc981fe3;
 	box-shadow: 5px 6px 17px #cc981fb0;
-	background-image: url(noz1.jpg);
-	/* background-color: black; */
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
-	color: beige;
+	background-color: black;
+
+	color: rgb(235, 231, 194);
 }
 
 .logoMenuWrap {
@@ -672,10 +669,13 @@ main {
 	padding: 1em;
 	border-bottom: 1px dashed #d5b66dfb;
 	cursor: pointer;
-	font-size: 1em;
+	font-size: clamp(0.8rem, 1.2vw, 0.9rem);
 }
-.menuWrap ul > li > h3 {
-	font-size: 1.4em;
+.menuWrap ul > li h3 {
+	font-size: clamp(1.1rem, 2.4vw, 1.4rem);
+}
+.price {
+	padding-top: 1.2em;
 }
 
 .menuPosition > .withPhoto::before {
@@ -721,62 +721,62 @@ main {
 
 .menuWrap h2 {
 	font-family: 'Special Elite', cursive;
-	font-size: 3.4em;
+	font-size: clamp(1.2rem, 2.5vw, 1.6rem);
 	font-weight: bold;
-	color: black;
+	color: rgb(34, 33, 33);
 	text-align: center;
 	padding: 1.5em 1em 0 1em;
 }
 .starters {
 	background-color: beige;
 
-	color: rgb(10, 10, 10);
+	color: rgb(70, 62, 62);
 }
 
 .greekFish {
 	background-color: beige;
 
-	color: rgb(10, 10, 10);
+	color: rgb(70, 62, 62);
 }
 .pasta {
 	background-color: beige;
 
-	color: rgb(10, 10, 10);
+	color: rgb(70, 62, 62);
 }
 .foodAdditives {
 	background-color: beige;
 
-	color: rgb(10, 10, 10);
+	color: rgb(70, 62, 62);
 }
 
 .hotDrinks {
 	background-color: beige;
 
-	color: rgb(10, 10, 10);
+	color: rgb(70, 62, 62);
 }
 .drinks {
 	background-color: beige;
 
-	color: rgb(10, 10, 10);
+	color: rgb(70, 62, 62);
 }
 
 .soup h2 {
-	color: beige;
+	color: rgb(235, 231, 194);
 }
 .meat h2 {
-	color: beige;
+	color: rgb(235, 231, 194);
 }
 .salads h2 {
-	color: beige;
+	color: rgb(235, 231, 194);
 }
 .desserts h2 {
-	color: beige;
+	color: rgb(235, 231, 194);
 }
 .frappe h2 {
-	color: beige;
+	color: rgb(235, 231, 194);
 }
 .alkohols h2 {
-	color: beige;
+	color: rgb(235, 231, 194);
 }
 
 .soup > ul {
@@ -805,7 +805,7 @@ main {
 	flex-direction: column;
 	justify-content: space-around;
 	background: black;
-	font-size: 1.5em;
+
 	position: fixed;
 	top: 10em;
 	left: 1.5em;
@@ -819,8 +819,7 @@ main {
 	color: beige;
 }
 .menuContact span {
-	margin-top: 2em;
-	/* font-size: 0.8em; */
+	font-size: clamp(0.7rem, 1.5vw, 1.4rem);
 }
 .menuLogo {
 	margin: 1em auto 1em;
@@ -836,9 +835,6 @@ main {
 	width: 20%;
 }
 @media only screen and (max-width: 970px) {
-	.menuWrap h2 {
-		font-size: 2.5em;
-	}
 	.menuContact {
 		position: fixed;
 		width: 99%;
@@ -862,7 +858,6 @@ main {
 	}
 	.menuContact span {
 		margin-top: 0.5em;
-		font-size: 1em;
 	}
 	.menuWrap {
 		grid-column: 2/12;
@@ -871,8 +866,7 @@ main {
 		padding: 0;
 	}
 	.menuWrap ul > li {
-		font-size: 1.5em;
-		padding: 0;
+		padding: 0.3em;
 	}
 	.activeWraper {
 		padding: 0.7em;
@@ -885,19 +879,19 @@ main {
 		left: 10%;
 	}
 	.Photo {
-		width: 113%;
+		width: 111%;
 		padding: 0;
 	}
 }
 @media only screen and (max-width: 425px) {
 	.Photo {
-		width: 129%;
+		width: 123%;
 		padding: 0;
 	}
 }
 @media only screen and (max-width: 322px) {
 	.Photo {
-		width: 139%;
+		width: 138%;
 		padding: 0;
 	}
 }
