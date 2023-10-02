@@ -37,7 +37,7 @@ body {
 }
 h1 {
 	font-size: 2em;
-	font-family: 'Englebert', sans-serif;
+	font-family: 'Special Elite', cursive;
 	letter-spacing: 0.3em;
 }
 h2 {
@@ -70,7 +70,7 @@ header {
 	z-index: 1;
 }
 #PhotoheaderLogo {
-	grid-area: 2/10/9/16;
+	grid-area: 2/8/11/18;
 	z-index: 1;
 }
 #PhotoheaderLogo img {
@@ -79,12 +79,14 @@ header {
 	object-fit: contain;
 }
 #PhotoheaderPhone {
+	padding-top: 2em;
 	background-color: black;
 	border-radius: 15px;
 	grid-area: 14/3/16/8;
 	z-index: 1;
 }
 #PhotoheaderPhone > p {
+	padding-top: 1em;
 	font-size: clamp(0.3rem, 3vw, 1.7rem);
 	color: #f3dce1;
 }
@@ -117,6 +119,7 @@ header {
 	z-index: 1;
 }
 #PhotoheaderAdress > p {
+	padding-top: 2em;
 	color: #f3dce1;
 	font-size: clamp(0.3rem, 3vw, 1.7rem);
 }
@@ -204,7 +207,7 @@ ul > li {
 	list-style: none;
 }
 ul > li > a {
-	font-family: 'Englebert', sans-serif;
+	font-family: 'Special Elite', cursive;
 	font-weight: 100;
 	text-decoration: none;
 	color: var(--gold);
@@ -333,24 +336,14 @@ footer {
 	background-color: #3a6c4a;
 	grid-column: 1/13;
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(6, 1fr);
 	grid-template-rows: 0.5fr auto auto;
 	margin: 7.5em 0 10px 0;
 	z-index: 2;
 }
-.logoFooter {
-	grid-column: 2/3;
-	grid-row: 1/2;
-	justify-items: center;
-	text-align: center;
-}
-.logoFooter img {
-	max-width: 90%;
-	max-height: 90%;
-	object-fit: cover;
-}
+
 .adressFooter {
-	grid-column: 1/2;
+	grid-column: 1/3;
 	grid-row: 2/3;
 	display: flex;
 	justify-content: space-around;
@@ -368,7 +361,7 @@ footer {
 	margin: 0 auto;
 }
 .mapFooter {
-	grid-column: 2/3;
+	grid-column: 3/5;
 	grid-row: 2/3;
 	display: flex;
 
@@ -382,7 +375,7 @@ footer {
 }
 
 .timeOpenFooter {
-	grid-column: 3/4;
+	grid-column: 5/7;
 	grid-row: 2/3;
 	display: flex;
 	font-size: 1.4em;
@@ -392,7 +385,7 @@ footer {
 	margin-left: 20px;
 }
 #designBy {
-	grid-column: 2/3;
+	grid-column: 3/5;
 	grid-row: 3/4;
 	justify-items: center;
 	text-align: center;
@@ -404,13 +397,13 @@ footer {
 
 	.adressFooter {
 		grid-column: 1/4;
-		grid-row: 2/3;
-
+		grid-row: 1/2;
 		justify-content: space-around;
 		margin: 20px auto;
+		padding-left: 1rem;
 	}
 	.mapFooter {
-		grid-column: 1/4;
+		grid-column: 2/6;
 		grid-row: 3/4;
 		max-width: 90%;
 		max-height: 90%;
@@ -418,14 +411,42 @@ footer {
 	}
 
 	.timeOpenFooter {
-		grid-column: 1/4;
-		grid-row: 4/5;
+		grid-column: 4/7;
+		grid-row: 1/2;
 		justify-items: center;
 		margin: 20px auto;
 		justify-content: space-around;
 	}
 	#designBy {
-		grid-column: 2/3;
+		grid-column: 3/5;
+		grid-row: 5/6;
+	}
+}
+@media only screen and (max-width: 425px) {
+	.adressFooter {
+		grid-column: 1/7;
+		grid-row: 1/2;
+		justify-content: space-around;
+		margin: 20px auto;
+	}
+	.mapFooter {
+		grid-column: 1/7;
+		grid-row: 3/4;
+		max-width: 90%;
+		max-height: 80%;
+		margin: auto;
+	}
+
+	.timeOpenFooter {
+		grid-column: 1/7;
+		grid-row: 2/3;
+		justify-items: center;
+		margin: auto;
+		justify-content: space-around;
+		padding: 1em;
+	}
+	#designBy {
+		grid-column: 3/5;
 		grid-row: 5/6;
 	}
 }
@@ -448,7 +469,7 @@ main {
 	background: radial-gradient(#509767, #2a5037, #112518);
 	cursor: pointer;
 	color: var(--gold);
-	font-family: 'Englebert', sans-serif;
+	font-family: 'Special Elite', cursive;
 	font-size: 1.5em;
 	position: relative;
 	transition: background 0.8s ease-in-out;
@@ -475,7 +496,7 @@ main {
 	font-size: 1.8em;
 	color: var(--gold);
 	cursor: pointer;
-	font-family: 'Englebert', sans-serif;
+	font-family: 'Special Elite', cursive;
 	font-weight: 900;
 	box-shadow: 0px 1px 8px 7px rgba(223, 150, 172, 0.2);
 	transition: transform 0.8s ease-in-out;
@@ -608,7 +629,7 @@ main {
 	color: black;
 	width: 100%;
 	height: auto;
-
+	font-family: 'Arimo', sans-serif;
 	border: solid 1em #d5b66d;
 	border-block-color: #cc981fe3;
 	box-shadow: 5px 6px 17px #cc981fb0;
@@ -651,7 +672,10 @@ main {
 	padding: 1em;
 	border-bottom: 1px dashed #d5b66dfb;
 	cursor: pointer;
-	font-size: 2.4em;
+	font-size: 1em;
+}
+.menuWrap ul > li > h3 {
+	font-size: 1.4em;
 }
 
 .menuPosition > .withPhoto::before {
@@ -696,6 +720,7 @@ main {
 }
 
 .menuWrap h2 {
+	font-family: 'Special Elite', cursive;
 	font-size: 3.4em;
 	font-weight: bold;
 	color: black;
