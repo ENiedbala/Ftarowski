@@ -94,7 +94,7 @@ header {
 	background-color: black;
 	border: 2px solid #fcfafa;
 
-	grid-area: 11/9/16/17;
+	grid-area: 12/9/16/17;
 	z-index: 1;
 }
 #PhotoheaderName h1 {
@@ -471,6 +471,7 @@ main {
 	color: var(--gold);
 	font-family: 'Special Elite', cursive;
 	font-size: 1.5em;
+	line-height: 1.5em;
 	position: relative;
 	transition: background 0.8s ease-in-out;
 }
