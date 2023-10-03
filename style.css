@@ -18,7 +18,7 @@ body {
 	overflow-y: scroll;
 	overflow-wrap: break-word;
 	height: auto;
-	font-family: 'Lora', serif;
+	font-family: 'Arimo', sans-serif;
 }
 .container {
 	overflow-x: hidden;
@@ -450,9 +450,34 @@ footer {
 		grid-row: 5/6;
 	}
 }
+/* AboutUs styling */
+.aboutUs {
+	margin: 10em auto;
+	width: 95vw;
+	height: auto;
+	display: flex;
+	grid-column: 2/12;
+	align-items: center;
+}
+.photoPanos {
+	width: 54%;
+	padding: 1em;
+	border: solid 1px #cfae61;
+}
+.photoPanos img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.descriptionAboutUs {
+	width: 40%;
+	padding: 2em;
+	color: rgb(235, 231, 194):
+}
+
 /* main styling */
 main {
-	font-family: 'Merriweather', serif;
+	font-family: 'Arimo', sans-serif ;
 	grid-column: 1/13;
 	width: 100%;
 	margin: 0.5em 0;
@@ -521,6 +546,7 @@ main {
 	background-color: rgb(0, 0, 0);
 	position: absolute;
 	left: 3%;
+	color: rgb(235, 231, 194);
 }
 .mainAboutRestaurant > h1 {
 	font-size: clamp(1.5rem, 3vw, 5rem);
@@ -627,7 +653,6 @@ main {
 	align-items: center;
 	justify-content: center;
 	justify-items: center;
-	color: black;
 	width: 100%;
 	height: auto;
 	font-family: 'Arimo', sans-serif;
@@ -686,7 +711,7 @@ main {
 	font-style: italic;
 }
 .menuPosition > .withPhoto:hover::before {
-	font-size: 0.6em;
+	font-size: 0.8em;
 	transition: font-size 0.3s;
 }
 .orangeJuice .drinksList1 {
@@ -724,7 +749,7 @@ main {
 	font-family: 'Special Elite', cursive;
 	font-size: clamp(1.2rem, 2.5vw, 1.6rem);
 	font-weight: bold;
-	color: rgb(34, 33, 33);
+	color: rgb(58, 51, 51);
 	text-align: center;
 	padding: 1.5em 1em 0 1em;
 }
@@ -820,7 +845,7 @@ main {
 	color: beige;
 }
 .menuContact span {
-	font-size: clamp(0.7rem, 1.5vw, 1.4rem);
+	font-size: clamp(0.7rem, 1vw, 1.4rem);
 }
 .menuLogo {
 	margin: 1em auto 1em;
@@ -936,12 +961,13 @@ main {
 	width: 100%;
 	height: 100%;
 	padding: 1.5em 0;
+	align-items: center;
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 }
 .cateringElementPhotoParty {
 	grid-column: 1/8;
-	height: 50vh;
+	height: 80vh;
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: repeat(4, 1fr);
@@ -978,7 +1004,7 @@ main {
 }
 .cateringElementPhotoBiznes {
 	grid-column: 6/13;
-	height: 50vh;
+	
 	grid-row: 1/5;
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
@@ -1039,11 +1065,11 @@ main {
 	height: auto;
 	justify-content: center;
 	text-align: center;
-	color: var(--gold);
+	color: #e9e3d3;
 }
 .mainContactWrapper a {
 	text-decoration: none;
-	color: var(--gold);
+	color: #e9e3d3;
 }
 .logomainContact {
 	width: 20vw;
@@ -1092,7 +1118,7 @@ main {
 }
 .GalleryPhotoHeader > div > h1 {
 	text-align: center;
-	color: #ce7a8a;
+	color: #e9e3d3;
 	align-self: center;
 	font-size: 5em;
 }
