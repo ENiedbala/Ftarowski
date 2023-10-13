@@ -7,49 +7,68 @@ const handleClick = () => {
 };
 hamburger.addEventListener('click', handleClick);
 
-(async () =>
-	// async IIFE code for slider.
-	{
-		const interval = 1500, // ms
-			paddingRight = 10,
-			slideContainer = document.querySelector('.wrapper'),
-			slidesWrapper = document.querySelector('.carousellWrapper'),
-			slides = document.querySelectorAll('.carousellSlide'),
-			delay = ms => new Promise(r => setTimeout(r, ms)),
-			movLeft = (el, mov) =>
-				new Promise(r => {
-					el.ontransitionend = _ => {
-						el.ontransitionend = null;
-						el.style.transition = 'none';
-						r();
-					};
-					el.style.transition = '2s';
-					el.style.transform = `translateX(${-mov}px)`;
-				});
+// first site slider
+const carouselSlide = document.querySelectorAll('.carousellSlide');
 
-		let index = 0;
-
-		while (true) {
-			// infinite carrousel loop
-			await delay(interval);
-			await movLeft(slidesWrapper, slides[index].clientWidth + paddingRight);
-
-			slidesWrapper.appendChild(slides[index]); // mov first slide to the end
-			slidesWrapper.style.transform = `translateX(0)`; // rest translateX
-			index = ++index % slides.length;
-		}
-	})();
-
-const Position = document.querySelectorAll('.menuPosition');
-const Photo = document.querySelectorAll('.Photo');
-
-for (let i = 0; i < Position.length; i++) {
-	Position[i].addEventListener('click', e => {
-		for (let a = 0; a < Photo.length; a++) {
-			Photo[i].classList.toggle('Photoactive');
-		}
+function showSlide() {
+	carouselSlide.forEach(function (el, index) {
+		setTimeout(function () {
+			console.log(el);
+			document.querySelector('.show').classList.remove('show');
+			el.classList.add('show');
+			if (el == carouselSlide.length - 1) {
+				el = 0;
+			}
+		}, 3000 * (index + 1));
 	});
 }
+showSlide();
+setInterval(showSlide, 14000);
+
+// (async () =>
+// 	// async IIFE code for slider.
+// 	{
+// 		const interval = 1500, // ms
+// 			paddingRight = 10,
+// 			slideContainer = document.querySelector('.wrapper'),
+// 			slidesWrapper = document.querySelector('.carousellWrapper'),
+// 			slides = document.querySelectorAll('.carousellSlide'),
+// 			delay = ms => new Promise(r => setTimeout(r, ms)),
+// 			movLeft = (el, mov) =>
+// 				new Promise(r => {
+// 					el.ontransitionend = _ => {
+// 						el.ontransitionend = null;
+// 						el.style.transition = 'none';
+// 						r();
+// 					};
+// 					el.style.transition = '2s';
+// 					el.style.transform = `translateX(${-mov}px)`;
+// 				});
+
+// 		let index = 0;
+
+// 		while (true) {
+// 			// infinite carrousel loop
+// 			await delay(interval);
+// 			await movLeft(slidesWrapper, slides[index].clientWidth + paddingRight);
+
+// 			slidesWrapper.appendChild(slides[index]); // mov first slide to the end
+// 			slidesWrapper.style.transform = `translateX(0)`; // rest translateX
+// 			index = ++index % slides.length;
+// 		}
+// 	})();
+
+// const Position = document.querySelectorAll('.menuPosition');
+// const Photo = document.querySelectorAll('.Photo');
+
+// for (let i = 0; i < Position.length; i++) {
+// 	Position[i].addEventListener('click', e => {
+// 		for (let a = 0; a < Photo.length; a++) {
+// 			Photo[i].classList.toggle('Photoactive');
+// 		}
+// 	});
+// }
+
 // RestaurantGallery
 const galleryImages = document.querySelectorAll('.photoGallery img');
 const popup = document.querySelector('.popup');
@@ -94,7 +113,6 @@ galleryImages.forEach((image, index) => {
 			element.setAttribute('tabindex', -1);
 		});
 	};
-
 	image.addEventListener('click', ShowPopup);
 	image.addEventListener('keydown', e => {
 		if (e.code === 'Enter' || e.keyCode === 13) {

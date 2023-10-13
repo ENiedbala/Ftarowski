@@ -558,43 +558,36 @@ main {
 	font-size: clamp(1rem, 3vw, 1.1rem);
 }
 
-.firstSideGalleryWrapper > ul > li {
-	list-style: none;
-	text-decoration: none;
-}
-
 .firstSideGalleryWrapper {
-	grid-column: 1/12;
+	grid-column: 2/12;
 	margin: 0 auto;
 	width: 100%;
 	height: 100%;
 	position: relative;
 }
 .wrapper {
-	width: 55%;
+	width: 50%;
 	height: 100%;
 }
-.carousellWrapper {
-	display: flex;
-	list-style: none;
-	gap: 10px;
-	flex-shrink: 1;
-}
+
+
 .carousellSlide img {
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
-}
-.carousellSlide {
-	position: relative;
-	flex-shrink: 0;
-	height: 450px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	/* min-width: 100%; */
+	object-fit: contain;
+	
 }
 
+
+.carousellSlide {
+	
+	display: none;
+	height: 450px;
+	
+}
+.show{
+	display: block;
+}
 @media only screen and (max-width: 970px) {
 	.mainAboutRestaurant {
 		grid-column: 2/11;
