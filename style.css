@@ -462,7 +462,10 @@ footer {
 .photoPanos {
 	width: 54%;
 	padding: 1em;
-	border: solid 1px #cfae61;
+	border-bottom: solid 1px #ebe7e0;
+	border-top: solid 1px #c9a85b;
+	border-left:solid 1px #c9a85b;
+	border-right: solid 1px #ebe7e0;
 }
 .photoPanos img {
 	width: 100%;
@@ -536,7 +539,7 @@ main {
 }
 
 .mainAboutRestaurant {
-	grid-column: 6/13;
+	grid-column: 7/13;
 	width: 100%;
 	height: 100%;
 	justify-content: center;
@@ -567,7 +570,11 @@ main {
 }
 .wrapper {
 	width: 50%;
-	height: 100%;
+	height: 80%;
+	
+	border-top: #e9e3d3 2px solid;
+	border-bottom:  #e9e3d3 2px solid;
+	
 }
 
 
@@ -575,20 +582,21 @@ main {
 	width: 100%;
 	height: 100%;
 	object-fit: contain;
-	
+	border-radius: 10px;
+	box-shadow: 1px 1px 12px 0px  #c7a0a17c;
 }
 
 
 .carousellSlide {
 	
 	display: none;
-	height: 450px;
+	height: 100%;
 	
 }
 .show{
 	display: block;
 	animation-name: appears;
-	animation-duration: 6.5s;
+	animation-duration: 7.5s;
 	animation-fill-mode: forwards;
 	
 	animation-timing-function: ease-out;
@@ -619,9 +627,23 @@ main {
 		background-color: rgba(0, 0, 0, 0.274);
 		position: relative;
 	}
-	.carousellSlide {
-		height: 300px;
+	.firstSideGalleryWrapper{
+		grid-column: 1/13;
 	}
+	.wrapper
+	{
+		height: 100vh;
+		margin:auto;
+		width: 70%;
+		border: none;
+		padding-top:2em ;
+	}
+	.carousellSlide img {
+	
+	object-fit: cover;
+	
+}
+
 	.mainAboutRestaurant > h1 {
 		text-align: center;
 		margin-top: 5%;
@@ -630,9 +652,15 @@ main {
 		margin: 1em 1em;
 	}
 }
-@media screen and (max-width: 970px) {
-	.carousellSlide {
-		height: 300px;
+
+@media screen and (max-width: 425px) {
+	.wrapper
+	{
+		height: 90vh;
+		margin:auto;
+		width: 90%;
+		border: none;
+		padding-top:2em ;
 	}
 }
 
