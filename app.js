@@ -19,11 +19,11 @@ function showSlide() {
 			if (el == carouselSlide.length - 1) {
 				el = 0;
 			}
-		}, 3000 * (index + 1));
+		}, 7000 * index);
 	});
 }
 showSlide();
-setInterval(showSlide, 14000);
+setInterval(showSlide, 35500);
 
 // (async () =>
 // 	// async IIFE code for slider.
