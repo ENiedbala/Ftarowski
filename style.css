@@ -79,14 +79,14 @@ header {
 	object-fit: contain;
 }
 #PhotoheaderPhone {
-	padding-top: 2em;
+	
 	background-color: black;
 	border-radius: 15px;
 	grid-area: 14/3/16/8;
 	z-index: 1;
 }
 #PhotoheaderPhone > p {
-	padding-top: 1em;
+	padding: 1em;
 	font-size: clamp(0.3rem, 3vw, 1.7rem);
 	color: #f3dce1;
 }
@@ -119,7 +119,7 @@ header {
 	z-index: 1;
 }
 #PhotoheaderAdress > p {
-	padding-top: 2em;
+	padding: 1em;
 	color: #f3dce1;
 	font-size: clamp(0.3rem, 3vw, 1.7rem);
 }
@@ -137,13 +137,32 @@ header {
 	#PhotoheaderName h3 {
 		line-height: 0;
 	}
+	#PhotoheaderName h1 {
+		padding-top: 0.5em;
+	}
 
 	#PhotoheaderAdress {
 		grid-area: 13/18/16/24;
+		padding-top: 0em;
+	}
+	#PhotoheaderAdress >p {
+		
+		padding: 0em;
 	}
 	#PhotoheaderPhone {
 		grid-area: 13/2/16/8;
+		padding: 0em;
 	}
+	#PhotoheaderPhone >p {
+		
+		padding: 0em;
+	}
+
+	#PhotoheaderName {
+		grid-area: 11/9/16/17;
+	
+	}
+
 }
 @media only screen and (max-width: 425px) {
 	header {
@@ -161,6 +180,17 @@ header {
 	}
 	#PhotoheaderPhone {
 		grid-area: 14/2/15/8;
+	
+	}
+	#PhotoheaderAdress >p{
+		padding:0.5em
+	}
+	#PhotoheaderPhone >p{
+	
+		padding-top: 0.5em;
+	}
+	#PhotoheaderLogo{
+		grid-area:3/3/13/23 ;
 	}
 }
 /* nav styling */
