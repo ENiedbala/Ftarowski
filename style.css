@@ -510,7 +510,7 @@ footer {
 	font-size: clamp(1.5rem, 1.5em, 3rem);
 }
 .descriptionAboutUs >p{
-font-size: clamp(0.5rem, 1.2em, 1.5rem);
+font-size: clamp(0.5rem, 1em, 1.5rem);
 }
 @media only screen and (max-width: 970px) {
 	.photoPanos {
@@ -543,6 +543,7 @@ main {
 	position: relative;
 	height: auto;
 }
+
 .menuButoon {
 	width: 100px;
 	height: 100px;
