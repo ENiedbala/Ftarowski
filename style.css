@@ -506,16 +506,17 @@ footer {
 	margin-left: 2em;
 	color: rgb(235, 231, 194);
 }
-.descriptionAboutUs h1{
+.descriptionAboutUs h1 {
 	font-size: clamp(1.5rem, 1.5em, 3rem);
 }
-.descriptionAboutUs >p{
-font-size: clamp(0.5rem, 1em, 1.5rem);
+.descriptionAboutUs > p {
+	font-size: clamp(0.5rem, 1em, 1.5rem);
 }
 @media only screen and (max-width: 970px) {
 	.photoPanos {
 		width: 50%;
 		padding: 2em;
+	}
 }
 @media only screen and (max-width: 425px) {
 	.aboutUs {
@@ -533,6 +534,7 @@ font-size: clamp(0.5rem, 1em, 1.5rem);
 }
 
 /* main styling */
+
 main {
 	font-family: 'Arimo', sans-serif;
 	grid-column: 1/13;
