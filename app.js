@@ -23,7 +23,7 @@ function showSlide() {
 	});
 }
 showSlide();
-setInterval(showSlide, 35500);
+setInterval(showSlide, 56500);
 
 // Menu photo
 
