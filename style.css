@@ -56,7 +56,7 @@ header {
 	height: 100%;
 	text-align: center;
 	display: grid;
-	background-image: url(photos/3sala3.jpg);
+	background-image: url(photos/3sala3.jpeg);
 	background-position: center;
 	background-size: cover;
 
@@ -86,7 +86,7 @@ header {
 }
 #PhotoheaderPhone > p {
 	padding: 1em;
-	font-size: clamp(0.3rem, 3vw, 1.7rem);
+	font-size: clamp(0.3rem, 3vw, 2.7rem);
 	color: #f3dce1;
 }
 #PhotoheaderName {
@@ -120,7 +120,7 @@ header {
 #PhotoheaderAdress > p {
 	padding: 1em;
 	color: #f3dce1;
-	font-size: clamp(0.3rem, 3vw, 1.7rem);
+	font-size: clamp(0.3rem, 3vw, 2.7rem);
 }
 #PhotoheaderBottomPink {
 	grid-area: 13/1/18/25;
@@ -137,26 +137,26 @@ header {
 		line-height: 0;
 	}
 	#PhotoheaderName h1 {
-		padding-top: 0.5em;
+		padding-top: 1.5em;
 	}
 
 	#PhotoheaderAdress {
-		grid-area: 13/18/16/24;
+		grid-area: 14/19/16/24;
 		padding-top: 0em;
 	}
 	#PhotoheaderAdress > p {
-		padding: 0em;
+		padding: 1em 0;
 	}
 	#PhotoheaderPhone {
-		grid-area: 13/2/16/8;
+		grid-area: 14/2/16/7;
 		padding: 0em;
 	}
 	#PhotoheaderPhone > p {
-		padding: 0em;
+		padding: 1em 0;
 	}
 
 	#PhotoheaderName {
-		grid-area: 11/9/16/17;
+		grid-area: 13/8/16/18;
 	}
 }
 @media only screen and (max-width: 425px) {
@@ -168,7 +168,7 @@ header {
 		padding-top: 1.5em;
 	}
 	#PhotoheaderName {
-		grid-area: 12/8/15/18;
+		grid-area: 13/8/15/18;
 	}
 	#PhotoheaderAdress {
 		grid-area: 14/18/15/24;
@@ -184,6 +184,9 @@ header {
 	}
 	#PhotoheaderLogo {
 		grid-area: 3/3/13/23;
+	}
+	.PhotoheaderFirst {
+		height: 90%;
 	}
 }
 /* nav styling */
