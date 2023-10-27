@@ -485,15 +485,27 @@ footer {
 }
 /* AboutUs styling */
 .aboutUs {
-	margin: 10em auto;
+	margin: 18em auto;
 	width: 95vw;
 	height: auto;
-	display: flex;
 	grid-column: 2/12;
 	align-items: center;
 }
+.Title {
+	width: 90%;
+	margin: auto;
+	padding: 2em;
+}
+.Title h1 {
+	font-size: clamp(2rem, 3em, 3rem);
+}
+
+#PhotoAndDescription {
+	display: flex;
+}
 .photoPanos {
 	width: 50%;
+	height: fit-content;
 	padding: 5em;
 	border-bottom: solid 1px #ebe7e0;
 	border-top: solid 1px #c9a85b;
@@ -511,19 +523,35 @@ footer {
 	margin-left: 2em;
 	color: rgb(235, 231, 194);
 }
-.descriptionAboutUs h1 {
-	font-size: clamp(1.5rem, 1.5em, 3rem);
+.descriptionAboutUs h3 {
+	font-size: clamp(2rem, 3em, 3rem);
 }
 .descriptionAboutUs > p {
-	font-size: clamp(0.5rem, 1em, 1.5rem);
+	font-size: clamp(0.5rem, 2.9em, 1.5rem);
+	line-height: 1.3em;
 }
-@media only screen and (max-width: 970px) {
+@media only screen and (max-width: 1000px) {
+	#PhotoAndDescription {
+		flex-direction: column;
+		margin: 1em auto 0;
+		justify-content: center;
+		align-items: center;
+	}
 	.photoPanos {
-		width: 50%;
+		width: 80%;
 		padding: 2em;
+	}
+	.descriptionAboutUs {
+		width: 80%;
+		margin: 0;
 	}
 }
 @media only screen and (max-width: 425px) {
+	.Title {
+		width: 95%;
+		margin: auto;
+		padding: 0;
+	}
 	.aboutUs {
 		flex-direction: column;
 		margin: 8em auto 0;
@@ -533,7 +561,7 @@ footer {
 		padding: 2em;
 	}
 	.descriptionAboutUs {
-		width: 90%;
+		width: 95%;
 		margin: 0;
 	}
 }
