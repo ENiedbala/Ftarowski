@@ -13,7 +13,6 @@ const carouselSlide = document.querySelectorAll('.carousellSlide');
 function showSlide() {
 	carouselSlide.forEach(function (el, index) {
 		setTimeout(function () {
-			console.log(el);
 			document.querySelector('.show').classList.remove('show');
 			el.classList.add('show');
 			if (el == carouselSlide.length - 1) {
@@ -23,7 +22,7 @@ function showSlide() {
 	});
 }
 showSlide();
-setInterval(showSlide, 56500);
+setInterval(showSlide, 85500);
 
 // Menu photo
 
