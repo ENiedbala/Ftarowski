@@ -49,7 +49,7 @@ h2 {
 header {
 	grid-column: 1/13;
 	margin-top: 10em;
-	margin-bottom: 7em;
+	margin-bottom: 0em;
 }
 .PhotoheaderFirst {
 	width: 100%;
@@ -66,7 +66,7 @@ header {
 
 #PhotoheaderFrame {
 	grid-area: 3/3/15/23;
-	border: 2px solid #f7f4f5;
+	border: 1px solid #f7f4f5;
 	z-index: 1;
 }
 #PhotoheaderLogo {
@@ -91,7 +91,7 @@ header {
 }
 #PhotoheaderName {
 	background-color: black;
-	border: 2px solid #fcfafa;
+	border: 1px solid #fcfafa;
 
 	grid-area: 13/9/16/17;
 	z-index: 1;
@@ -497,7 +497,7 @@ footer {
 	padding: 2em;
 }
 .Title h1 {
-	font-size: clamp(2rem, 3em, 3rem);
+	font-size: clamp(1rem, 2em, 3rem);
 }
 
 #PhotoAndDescription {
@@ -527,7 +527,7 @@ footer {
 	font-size: clamp(2rem, 3em, 3rem);
 }
 .descriptionAboutUs > p {
-	font-size: clamp(0.5rem, 2.9em, 1.5rem);
+	font-size: clamp(0.5rem, 1.2em, 1.5rem);
 	line-height: 1.3em;
 }
 @media only screen and (max-width: 1000px) {
@@ -629,16 +629,16 @@ main {
 }
 
 .mainAboutRestaurant {
-	grid-column: 7/13;
+	grid-column: 8/13;
 	width: 100%;
-	height: 100%;
+	height: auto;
 	justify-content: center;
 	text-align: center;
 	margin: auto;
 	z-index: 0;
 	background-color: rgb(0, 0, 0);
 	position: absolute;
-	left: 3%;
+	left: 1%;
 	color: rgb(235, 231, 194);
 }
 .mainAboutRestaurant > h1 {
@@ -652,7 +652,7 @@ main {
 }
 
 .firstSideGalleryWrapper {
-	grid-column: 2/12;
+	grid-column: 2/13;
 	margin: 0 auto;
 	width: 100%;
 	height: 100%;
@@ -705,6 +705,59 @@ main {
 		opacity: 0;
 	}
 }
+
+.news {
+	grid-column: 2/12;
+	border-top: 2px solid var(--gold);
+	display: flex;
+	width: 100%;
+	height: 50px;
+}
+.opinions {
+	grid-column: 2/12;
+	padding-top: 2em;
+	width: 100%;
+	border-top: 2px solid var(--gold);
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+.opinions h1 {
+	text-align: center;
+	padding-top: 3em;
+	padding-bottom: 3em;
+	font-size: clamp(1.5rem, 3vw, 2rem);
+}
+.opinionsBoxes {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+.opinionBox {
+	display: grid;
+	grid-template-rows: minmax(max-content, 3fr) 0.5fr;
+	border-left: 1px dotted var(--gold);
+}
+.opinionBox:last-child {
+	border-right: 1px dotted var(--gold);
+}
+.opinion {
+	margin: auto;
+	grid-row: 1/2;
+	padding: 3em 0;
+	font-size: clamp(0.8em, 1vw, 2rem);
+	width: 100%;
+	text-align: center;
+}
+.stars {
+	grid-row: 2/3;
+	width: 100%;
+	text-align: center;
+}
+.stars img {
+	width: 10%;
+	object-fit: cover;
+}
+
 @media only screen and (max-width: 970px) {
 	.mainAboutRestaurant {
 		grid-column: 2/11;
@@ -738,6 +791,10 @@ main {
 	.mainAboutRestaurant > h2 {
 		margin: 1em 1em;
 	}
+	.opinionsBoxes {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+	}
 }
 
 @media screen and (max-width: 425px) {
@@ -747,6 +804,17 @@ main {
 		width: 100%;
 		border: none;
 		padding-top: 2em;
+	}
+	.opinionsBoxes {
+		grid-template-columns: 1fr;
+	}
+	.opinionBox {
+		border-top: 1px solid var(--gold);
+		border-right: none;
+		border-left: none;
+	}
+	.opinionBox:last-child {
+		border-right: none;
 	}
 }
 
