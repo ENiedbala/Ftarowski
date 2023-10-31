@@ -22,7 +22,7 @@ function showSlide() {
 	});
 }
 showSlide();
-setInterval(showSlide, 85500);
+setInterval(showSlide, 77500);
 
 // Menu photo
 
