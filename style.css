@@ -381,7 +381,7 @@ footer {
 	flex-direction: column;
 	align-items: start;
 	margin-left: 50px;
-	font-size: clamp(0.9rem, 3vw, 2rem);
+	font-size: clamp(0.9rem, 2vw, 2rem);
 	color: rgb(24, 23, 23);
 }
 .adressFooter a {
@@ -395,9 +395,6 @@ footer {
 	padding: 1em;
 	display: flex;
 	justify-content: space-around;
-}
-#FB {
-	margin: 0 auto;
 }
 
 #socjal > a > img {
@@ -421,11 +418,12 @@ footer {
 	grid-column: 5/7;
 	grid-row: 2/3;
 	display: flex;
-	font-size: clamp(0.9rem, 3vw, 2rem);
+	font-size: clamp(0.9rem, 2vw, 2rem);
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: space-around;
-	margin-left: 20px;
+	margin-left: 10px;
+	padding-right: 16px;
 }
 #designBy {
 	grid-column: 3/5;
