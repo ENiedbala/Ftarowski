@@ -389,8 +389,19 @@ footer {
 	cursor: pointer;
 	color: rgb(24, 23, 23);
 }
+#socjal {
+	width: 100%;
+	height: auto;
+	padding: 1em;
+	display: flex;
+	justify-content: space-around;
+}
 #FB {
 	margin: 0 auto;
+}
+
+#socjal > a > img {
+	height: 50px;
 }
 .mapFooter {
 	grid-column: 3/5;
