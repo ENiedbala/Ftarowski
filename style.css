@@ -813,7 +813,7 @@ main {
 		height: auto;
 		justify-content: center;
 		text-align: center;
-		margin: auto;
+		margin: 10% auto;
 		z-index: 0;
 		background-color: rgba(0, 0, 0, 0.274);
 		position: relative;
@@ -869,6 +869,9 @@ main {
 	}
 	.opinionBox:last-child {
 		border-right: none;
+	}
+	.news {
+		grid-column: 1/13;
 	}
 }
 
