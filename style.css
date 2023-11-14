@@ -788,12 +788,10 @@ main {
 	border-right: 1px dotted var(--gold);
 }
 .opinion {
-	margin: auto;
 	grid-row: 1/2;
-	padding: 3em 0;
+	padding: 3em 2em;
 	font-size: clamp(0.8em, 1vw, 2rem);
 	width: 100%;
-	text-align: center;
 	line-height: 1.5em;
 }
 .stars {
