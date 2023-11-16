@@ -1194,7 +1194,7 @@ main {
 	background-repeat: no-repeat;
 }
 .cateringInfo > p {
-	font-size: clamp(1rem, 3vw, 2rem);
+	font-size: clamp(1rem, 2.2vw, 2rem);
 	font-weight: bold;
 	text-shadow: 2px 2px rgb(34, 34, 34);
 }
